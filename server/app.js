@@ -14,7 +14,8 @@ const app = express();
 
 // Импортируем созданный в отдельный файлах рутеры.
 const mainRouter = require('./routes/main');
-const userRouter = require('./routes/user');
+const todosRouter = require('./routes/todos');
+const notesRouter = require('./routes/notes');
 
 // Определяем порт.
 const port = (process.env.PORT ?? 3001);
@@ -95,7 +96,8 @@ app.use(express.static(path.join(process.env.PWD, 'public')));
 
 // Переход на ручки.
 app.use('/', mainRouter);
-app.use('/user', userRouter);
+app.use('/todos', todosRouter);
+app.use('/notes', notesRouter);
 
 const root = path.join(__dirname, '../', 'client', 'build');
 app.use(express.static(root));

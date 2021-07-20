@@ -3,13 +3,16 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import { useDispatch, useSelector } from 'react-redux';
 import { checkUserSession } from './redux/actions/userAction';
 
+import { Ring } from 'react-awesome-spinners';
 
-import './App.css'
+import './css/App.css'
 // components
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import TodoList from './Components/TodoList';
 import TodoForm from './Components/TodoForm';
+import NoteForm from './Components/NoteForm';
+import NoteTable from './Components/NoteTable';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,21 +21,39 @@ function App() {
     dispatch(checkUserSession())
   }, [dispatch])
 
-  const user = useSelector(state => state.user)
+  const user = useSelector(state => state.user);
 
   return (
     <Router>
       <Switch>
         <Route exact path='/'>
-          <Home />
+          {!user ? <Home /> : <Redirect to='/todos' />}
         </Route>
 
-        <Route path='/todos'>
-          {!user ? <Redirect to='/' /> :
+        <Route exact path='/todos'>
+          {!user ? <Ring/> :
             <>
               <Navbar user={user} />
-              <TodoForm />
-              <TodoList />
+              <div className='todosContainer'>
+                <div className='todos'>
+                  <TodoForm />
+                  <TodoList />
+                </div>
+              </div>
+            </>
+          }
+        </Route>
+
+        <Route exact path='/notes'>
+          {!user ? <Ring/> :
+            <>
+              <Navbar user={user} />
+              <div className='notesContainer'>
+                <div className='notes'>
+                  <NoteForm />
+                  <NoteTable />
+                </div>
+              </div>
             </>
           }
         </Route>

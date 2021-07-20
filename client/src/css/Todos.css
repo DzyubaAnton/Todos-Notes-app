@@ -1,0 +1,111 @@
+.todosContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.todos {
+  width: 700px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo {
+  width: 90%;
+  border: solid 4px;
+  border-radius: 20px;
+  min-height: auto;
+  margin: 10px 0px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5px;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 5px 2px rgba(34, 60, 80, 0.2);
+}
+
+.todo:hover {
+  transform: scale(1.1, 1.1);
+}
+
+
+.todoButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 70px;
+  padding: 10px 5px;
+}
+
+.doneButton,
+.deleteButton {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.todoForm {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 5px 0px 30px 0px;
+}
+
+.addButton {
+  min-width: 120px;
+  min-height: 40px;
+  margin: 15px 0px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  background-color: gray;
+  transition: 0.3s;
+  color: white;
+}
+
+.addButton:hover {
+  box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px gray,
+    0px 0px 0px 10px white, 0px 0px 0px 10.5px gray;
+  background: white;
+  color: black;
+  transition: 0.3s;
+}
+
+.todoInput {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 80px;
+  border-radius: 20px;
+  padding-inline-start: 20px;
+  box-sizing: border-box;
+  text-align: start;
+  padding: 10px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .todos,
+  .todoInput {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .todo {
+    flex-direction: column;
+  }
+}

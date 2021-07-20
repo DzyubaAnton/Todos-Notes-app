@@ -2,9 +2,9 @@ const router = require('express').Router();
 const Todo = require('../database/models/todo');
 const { authenticated } = require('./middleware');
 
-router.get('/todos', authenticated, async (req, res) => {
+router.get('/', authenticated, async (req, res) => {
   try {
-    const todos = await Todo.find({ user: req.session.passport.user });
+    const todos = await Todo.find({ user: req.session.passport.user }).sort({ createdAt: -1 });
     return res.json(todos).status(200);
   } catch (error) {
     return res.sendStatus(501);
@@ -21,12 +21,10 @@ router.post('/:id/addtodo', authenticated, async (req, res) => {
   }
 });
 
-router.patch('/:id/patchtodos', authenticated, async (req, res) => {
+router.patch('/:id/patchtodo', authenticated, async (req, res) => {
   try {
-    const { todos } = req.body;
-    todos.forEach(async (todo) => {
-      await Todo.findByIdAndUpdate(todo.id, { isDone: todo.isDone });
-    });
+    const { todo } = req.body;
+    await Todo.findByIdAndUpdate(todo._id, { isDone: todo.isDone });
     return res.sendStatus(200);
   } catch (error) {
     return res.sendStatus(501);
