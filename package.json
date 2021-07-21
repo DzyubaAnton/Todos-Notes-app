@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DzyubaAnton/Todos-Notes-app/issues"
   },
-  "homepage": "https://github.com/DzyubaAnton/Todos-Notes-app#readme"
+  "homepage": "https://github.com/DzyubaAnton/Todos-Notes-app#readme",
+  "dependencies": {
+    "firebase-tools": "^9.16.0"
+  }
 }
