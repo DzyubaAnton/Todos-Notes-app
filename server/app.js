@@ -99,7 +99,7 @@ app.use('/', mainRouter);
 app.use('/todos', todosRouter);
 app.use('/notes', notesRouter);
 
-const root = path.join('client', 'build');
+const root = path.join('../', 'client/', 'build');
 app.use(express.static(root));
 
 app.get('*', (req, res) => {
