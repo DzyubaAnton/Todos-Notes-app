@@ -2,7 +2,7 @@
   "name": "todos-notes-app",
   "version": "1.0.0",
   "description": "Todos & Notes app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd ./server && npm i && node app.js"
@@ -16,9 +16,5 @@
   "bugs": {
     "url": "https://github.com/DzyubaAnton/Todos-Notes-app/issues"
   },
-  "homepage": "https://github.com/DzyubaAnton/Todos-Notes-app#readme",
-  "dependencies": {
-    "firebase-tools": "^9.16.0",
-    "http-proxy-middleware": "^2.0.1"
-  }
+  "homepage": "https://github.com/DzyubaAnton/Todos-Notes-app#readme"
 }
