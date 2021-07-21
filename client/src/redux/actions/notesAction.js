@@ -1,5 +1,4 @@
 import * as TYPES from '../types/types';
-import url from '../../config/proxy';
 
 //============================================
 function setNotes(data) {
@@ -10,7 +9,7 @@ function setNotes(data) {
 }
 
 const getNotes = () => async (dispatch) => {
-  const res = await fetch(`${url}/notes`)
+  const res = await fetch(`/notes`)
   if (res.status === 200) {
     const data = await res.json()
     dispatch(setNotes(data))
@@ -25,7 +24,7 @@ function addNote(data) {
 }
 
 const createNote = (text, id) => async (dispatch) => {
-  const res = await fetch(`${url}/notes/${id}/addnote`,
+  const res = await fetch(`/notes/${id}/addnote`,
     {
       method: "POST",
       headers: {
@@ -58,7 +57,7 @@ function removeNote(data) {
 }
 
 const deleteNote = (note, id) => async (dispatch) => {
-  const res = await fetch(`${url}/notes/${id}/deletenote`,
+  const res = await fetch(`/notes/${id}/deletenote`,
     {
       method: "DELETE",
       headers: {
@@ -74,7 +73,7 @@ const deleteNote = (note, id) => async (dispatch) => {
 }
 
 const patchNote = (note, id) => async (dispatch) => {
-  const res = await fetch(`${url}/notes/${id}/patchNote`,
+  const res = await fetch(`/notes/${id}/patchNote`,
     {
       method: "PATCH",
       headers: {

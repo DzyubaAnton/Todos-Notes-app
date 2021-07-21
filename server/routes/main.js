@@ -5,7 +5,6 @@ const User = require('../database/models/user');
 // ================check session==============
 router.get('/login', async (req, res) => {
   let user;
-  console.log(req.session)
   try {
     user = await User.findById(req.session.passport.user);
     if (!user) return res.sendStatus(204);
@@ -25,7 +24,7 @@ router.get('/google', passport.authenticate('google', {
 // hand control to passport to use code to grab profile info
 router.get('/google/redirect', passport.authenticate('google'),
   (req, res) => {
-    res.redirect('https://todos-and-notes-app-client.herokuapp.com/');
+    res.redirect('https://todos-and-notes.herokuapp.com/');
   });
 
 // ==================logout=======================
