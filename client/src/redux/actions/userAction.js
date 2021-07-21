@@ -1,4 +1,5 @@
 import * as TYPES from '../types/types';
+import url from '../../config/proxy';
 
 //====================session========================
 function checkUser(data) {
@@ -9,7 +10,7 @@ function checkUser(data) {
 }
 
 const checkUserSession = () => (dispatch) => {
-    fetch('/login')
+    fetch(`${url}/login`)
     .then(res => res.status === 200 ? res.json() : null)
     .then(data => {
       dispatch(checkUser(data));
@@ -28,7 +29,7 @@ function signInUser(data = {}) {
 //==============google auth==============
 
 const loginUserByGoogle = () => async (dispatch) => {
-  const res = await fetch('/google')
+  const res = await fetch(`${url}/google`)
   if(res.status === 200) {
     const data = await res.json()
     dispatch(signInUser(data))
@@ -39,7 +40,7 @@ const loginUserByGoogle = () => async (dispatch) => {
 //========================logout====================
 
 const logoutUser = () => async (dispatch) => {
-  const res = await fetch('/logout')
+  const res = await fetch(`${url}/logout`)
   if (res.status === 200) dispatch(removeUser())
 }
 

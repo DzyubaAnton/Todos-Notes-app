@@ -1,4 +1,5 @@
 import * as TYPES from '../types/types';
+import url from '../../config/proxy';
 
 //============================================
 function setTodos(data) {
@@ -9,7 +10,7 @@ function setTodos(data) {
 }
 
 const getTodos = () => async (dispatch) => {
-  const res = await fetch('/todos')
+  const res = await fetch(`${url}/todos`)
   if (res.status === 200) {
     const data = await res.json()
     dispatch(setTodos(data))
@@ -24,7 +25,7 @@ function addTodo(data) {
 }
 
 const createTodo = (text, id) => async (dispatch) => {
-  const res = await fetch(`/todos/${id}/addtodo`,
+  const res = await fetch(`${url}/todos/${id}/addtodo`,
     {
       method: "POST",
       headers: {
@@ -57,7 +58,7 @@ function removeTodo(data) {
 }
 
 const deleteTodo = (todo, id) => async (dispatch) => {
-  const res = await fetch(`/todos/${id}/deletetodo`,
+  const res = await fetch(`${url}/todos/${id}/deletetodo`,
     {
       method: "DELETE",
       headers: {
@@ -73,7 +74,7 @@ const deleteTodo = (todo, id) => async (dispatch) => {
 }
 
 const patchTodo = (todo, id) => async (dispatch) => {
-  const res = await fetch(`/todos/${id}/patchtodo`,
+  const res = await fetch(`${url}/todos/${id}/patchtodo`,
     {
       method: "PATCH",
       headers: {
