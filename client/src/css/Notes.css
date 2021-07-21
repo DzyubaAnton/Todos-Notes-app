@@ -3,6 +3,7 @@
   justify-content: center;
   grid-template-columns: 700px;
   margin: 10px 5px;
+  width: 100%;
 }
 
 .notes {
