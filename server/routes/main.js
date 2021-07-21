@@ -5,6 +5,7 @@ const User = require('../database/models/user');
 // ================check session==============
 router.get('/login', async (req, res) => {
   let user;
+  console.log(req.session)
   try {
     user = await User.findById(req.session.passport.user);
     if (!user) return res.sendStatus(204);
