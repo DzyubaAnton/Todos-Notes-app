@@ -1,0 +1,20 @@
+{
+  "name": "todos-notes-app",
+  "version": "1.0.0",
+  "description": "Todos & Notes app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd ./server && npm i && node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DzyubaAnton/Todos-Notes-app.git"
+  },
+  "author": "Dzyuba Anton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DzyubaAnton/Todos-Notes-app/issues"
+  },
+  "homepage": "https://github.com/DzyubaAnton/Todos-Notes-app#readme"
+}
