@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3863695a.chunk.css",
+    "main.js": "/static/js/main.779cafcf.chunk.js",
+    "main.js.map": "/static/js/main.779cafcf.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.31d5311a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.31d5311a.js.map",
+    "static/js/2.afde8b4f.chunk.js": "/static/js/2.afde8b4f.chunk.js",
+    "static/js/2.afde8b4f.chunk.js.map": "/static/js/2.afde8b4f.chunk.js.map",
+    "static/js/3.298506cc.chunk.js": "/static/js/3.298506cc.chunk.js",
+    "static/js/3.298506cc.chunk.js.map": "/static/js/3.298506cc.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.3863695a.chunk.css.map": "/static/css/main.3863695a.chunk.css.map",
+    "static/js/2.afde8b4f.chunk.js.LICENSE.txt": "/static/js/2.afde8b4f.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/tileable_wood_texture.45ea212e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.31d5311a.js",
+    "static/js/2.afde8b4f.chunk.js",
+    "static/css/main.3863695a.chunk.css",
+    "static/js/main.779cafcf.chunk.js"
+  ]
+}
