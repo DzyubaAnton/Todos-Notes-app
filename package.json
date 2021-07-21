@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DzyubaAnton/Todos-Notes-app#readme",
   "dependencies": {
-    "firebase-tools": "^9.16.0"
+    "firebase-tools": "^9.16.0",
+    "http-proxy-middleware": "^2.0.1"
   }
 }
