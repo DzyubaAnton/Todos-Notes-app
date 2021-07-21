@@ -9,7 +9,7 @@ function Home() {
       <h3>
       Wellcome to Todos & Notes app!
       </h3>
-      <a className='googleButton' href="http://localhost:3001/google" role="button">
+      <a className='googleButton' href="https://todos-and-notes-app-server.herokuapp.com/google" role="button">
         <GoogleButton/>
       </a>
     </div>
