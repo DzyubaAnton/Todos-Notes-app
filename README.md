@@ -8,11 +8,14 @@ SPA web-приложение для планирования задач и ве�
 <ol>
 <li>Заходим на <a href="https://todos-and-notes.herokuapp.com">https://todos-and-notes.herokuapp.com<a/></li>
 <img width="850" alt="home" src="./shots/home.png">
+<br><br/>
 <li>Входим через Google аккаунт</li>
 <img width="850" alt="todos" src="./shots/todos.png">
+<br><br/>
 <li>Заполняем формы для создания задач и записей</li>
 <img width="850" alt="home" src="./shots/todosFrom.png">
 <img width="850" alt="home" src="./shots/notesForm.png">
+<br><br/>
 <li>Можем отмечать выполненные задачи и редактировать заметки</li>
 <img width="850" alt="home" src="./shots/done.png">
 </ol>
